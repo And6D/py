@@ -19,3 +19,4 @@ print((lambda a, b: a if a > b else b )(33, 34))
 
 
 
+print("Lambda", "Λ", " or ", "λ" )

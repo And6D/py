@@ -1,0 +1,3 @@
+def getpivet():
+    print('privet')
+

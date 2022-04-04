@@ -4,6 +4,11 @@ with open("num text.txt") as sourse:
         a, b = map(int, sourse.readline().split())
         print(a, b)
 """!! в строке 5 столбце 2 0 в начале не отображется"""
+"""Есть три способа вызова range():
+
+range(стоп) берет один аргумент
+range(старт, стоп) берет два аргумента
+range(старт, стоп, шаг) берет три аргумента"""
 
 print(a*b)
 

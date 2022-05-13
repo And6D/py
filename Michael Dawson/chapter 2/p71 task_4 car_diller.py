@@ -5,3 +5,12 @@
 # а остальные наценки будем считать фиксированными величинами.
 # Окончательная цена автомобиля должна быть выведена на экран.
 
+
+car_cost = int(input("Input price for a car in 'USD': "))
+tax = round(car_cost * 0.2)
+regFee = round(car_cost * 0.05)
+agencyFee = 20
+transportFee = 50
+final_cost = car_cost + tax + regFee + agencyFee + transportFee
+
+print('Final car Cost will be a',final_cost ,'USD')

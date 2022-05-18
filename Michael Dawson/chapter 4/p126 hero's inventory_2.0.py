@@ -19,4 +19,13 @@ start = int(input("\nEnter start index of cut: "))
 finish = int(input("Enter final index of cut: "))
 print("Cut inventory[", start, ":", finish, "] - this", end=" ")
 print(inventory[start:finish])
-input("\nHaжмитe Enter. чтобы продолжить.")
+
+# соединим два кортежа
+chest = ("gold", "gems")
+print("You find chest.Look inside:")
+print(chest)
+print("You loot the chest")
+inventory += chest
+print("Now in you inventory:")
+print(inventory)
+input("\n\nHaжмитe Enter. чтобы выйти.")

@@ -1,3 +1,3 @@
 # by user request count numbers
-# by user input set start and finish numbers
-# user can set step of count
+# input set start and finish numbers by user
+# set step of count by user

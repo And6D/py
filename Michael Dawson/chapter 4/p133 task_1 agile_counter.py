@@ -12,23 +12,11 @@ while agreement_before == 1:
     step = int(input("enter step:"))
     print("count range is:\t", start_num, "-", end_num, "\tstep", step)
 
-    agreement_in = input("\nto continue and count type 'Y'\n")
-
+    agreement_in = input("\nEnter to continue\n")
 
     for i in range(start_num, end_num, step):
        print(i, end=" ")
     break
-
-    # Включить обработку на пустой ввод
-    count = "Y"
-    restart ="N"
-# любой ввод возвращает в начала цикла
-# нужен  вложеный цикл при Y
-    while agreement_in == count:
-      for i in range(start_num, end_num, step):
-       print(i, end=" ")
-    break
-#  при N в начало цикла
 
 if agreement_before == 2:
     input("\n\nPress Enter to exit.")

@@ -12,7 +12,7 @@ while agreement_before == 1:
     step = int(input("enter step:"))
     print("count range is:\t", start_num, "-", end_num, "\tstep", step)
 
-    agreement_in = input("\nto continue and count type 'Y' or 'N' to re-enter Values: \n")
+    agreement_in = input("\nto continue and count type 'Y'\n")
 
 
     for i in range(start_num, end_num, step):

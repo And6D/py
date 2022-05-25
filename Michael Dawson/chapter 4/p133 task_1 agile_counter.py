@@ -1,25 +1,20 @@
 
-agreement_before =int(input("\n1. tape '1' to count"
-                            "\n2. tape '2' for exit\n"))
+print("\nEnter range, for count\n")
+start_num = int(input("start value :"))
+end_num = int(input("and end value:"))
+step = int(input("enter step:"))
+print("count range is:\t", start_num, "-", end_num, "\tstep", step)
+input("Enter to count")
+for i in range(start_num, end_num, step):
+    i <= end_num
+    print(i, end=" ")
 
-# включить проверку на пустой ввод
-# обработка ошибок
-while agreement_before == 1:
 
-    print("Enter range, for count\n")
-    start_num = int(input("start value :"))
-    end_num = int(input("and end value:"))
-    step = int(input("enter step:"))
-    print("count range is:\t", start_num, "-", end_num, "\tstep", step)
 
-    agreement_in = input("\nEnter to continue\n")
 
-    for i in range(start_num, end_num, step):
-       print(i, end=" ")
-    break
 
-if agreement_before == 2:
-    input("\n\nPress Enter to exit.")
+
+
 
 
 

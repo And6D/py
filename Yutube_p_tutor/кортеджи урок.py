@@ -21,4 +21,9 @@ print(dict["яблоко"])
 del(dict["лимон"])
 print(dict)
 
-
+print("Временный кортеж")
+a = 15
+b = 47
+print(a, b)
+a, b = b, a
+print(a, b)

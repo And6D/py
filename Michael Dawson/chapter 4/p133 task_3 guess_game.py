@@ -3,21 +3,21 @@
 # 1.получать право на подсказку в том случае, если у него нет никаких предположений.
 # Разработайте систему начисления очков, по которой бы иrроки, отгападавшие слов о без подсказки,
 # получали больше тех, кто запросил подсказку.
-
 # 0
 import random
 # 1
-WORDS = ("bullet", "sword", "turbojet",
+WORDS = ["bullet", "sword", "turbojet",
          "light", "sugar", "sweet",
-         "bicycle", "phone", "song")
-PROMPT = ("a small metal object that is fired from a gun",
-         "a weapon with a long metal blade",
-         "a turbine engine that produces forward movement "
-         "by forcing out a stream of hot air and gas behind it",
+         "bicycle", "phone", "song"]
+PROMPT = ["a small metal object that is fired from a gun",
+          "a weapon with a long metal blade",
+          "a turbine engine that produces forward movement by forcing out a stream of hot air and gas behind it",
          "the energy from the sun, a lamp, etc. that makes it possible to see things",
+          "a sweet substance, often in the form of white or brown crystals, made from the juices various plants, used in cooking or to make tea, coffee, etc. sweeter",
+          "containing, or tasting as if it contains, a lot of sugar",
          "a road vehicle with two wheels that you ride by pushing the pedals with your feet",
          "a piece of equipment for talking to people who are not in the same place as you",
-         "a short piece of music with words that you sing")
+         "a short piece of music with words that you sing"]
 # 2. chose random word
 word = random.choice(WORDS)
 # write chosen by random word in variable
@@ -30,13 +30,18 @@ while word:
     jumble += word[position]
     word = word[:position] + word[(position + 1):]
 # 4. set prompt
+# получем индекс загаданного слова
+w_index = WORDS.index(correct)
+k = w_index
+prompt = PROMPT[k]
 # для посказки берем индекс значения word из словаря WORDS и забирает значение с тем же индексом
-# из словаря PROMPT и предаем в переменную promt
+# из словаря PROMPT и предаем в переменную promt print prompt
 
 print("""go""")
 print("So, guess word:\t", jumble, "\tit", len(jumble) - 1, "wide")
 
 guess = input("\nTray to guess source word оr type 'prompt': ")
+
 # тут условие и ветвление
 #
 # если введено верное слово выводим "вы угадали"  и score=max_score  "игра окончена"

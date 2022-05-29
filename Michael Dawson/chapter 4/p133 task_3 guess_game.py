@@ -5,7 +5,7 @@
 # получали больше тех, кто запросил подсказку.
 # 0
 import random
-# 1
+# dictionary
 WORDS = ["bullet", "sword", "turbojet",
          "light", "sugar", "sweet",
          "bicycle", "phone", "song"]
@@ -18,48 +18,45 @@ PROMPT = ["a small metal object that is fired from a gun",
          "a road vehicle with two wheels that you ride by pushing the pedals with your feet",
          "a piece of equipment for talking to people who are not in the same place as you",
          "a short piece of music with words that you sing"]
-# 2. chose random word
+# random choice word generator
 word = random.choice(WORDS)
-# write chosen by random word in variable
 correct = word
-# 3. jumdle word
-jumble = " "
-# цикл осуществляет пермешивание исходного слова
+# prompt variable
+prompt = PROMPT[WORDS.index(correct)]
+# jumble module
+jumble = ""
 while word:
     position = random.randrange(len(word))
     jumble += word[position]
     word = word[:position] + word[(position + 1):]
-# 4. set prompt
-# получем индекс загаданного слова
-w_index = WORDS.index(correct)
-k = w_index
-prompt = PROMPT[k]
-# для посказки берем индекс значения word из словаря WORDS и забирает значение с тем же индексом
-# из словаря PROMPT и предаем в переменную promt print prompt
+# score system
+score = 100
+max_score =score
+mistake = -10
+use_prompt = -30
 
-print("""go""")
-print("So, guess word:\t", jumble, "\tit", len(jumble) - 1, "wide")
+print("""\n\tWat a jumble! Letter in word just going mad""")
+print("\nTry guess word:\t", jumble, "\nit consists ", len(jumble), " letter at length")
 
-guess = input("\nTray to guess source word оr type 'prompt': ")
+guess = input("\nHere the rules:\nGuess оr Enter to take prompt"
+              "\nYou can use a prompt just once, now or newer"
+              "\nUse a prompt take -30 points to you score"
+              "\nIf you guess at 1 try give take 100 points of score"
+              "\nEvery additional try -10 points to you score"
+              "\nYou will lose, when score will be 0 \t\n")
+if guess =="":
+    score += use_prompt
+    print("Prompt: ", prompt, "\nyou lost for use a prompt", use_prompt, "\nscore for now:",
+          score)
 
-# тут условие и ветвление
-#
-# если введено верное слово выводим "вы угадали"  и score=max_score  "игра окончена"
-# если выбрана посказка выводится jumble и посказка score=max_score - try
-
-#    выводится до тех пор пока 1.try < max_try  2. guess  guess == correct:
-# 1. print(вы исчерпли все попытки игра закончена)
-# 2. print(вы угадали)
-# попытки укадывается слово идем
-# дальше,
-
-#
-while guess != correct and guess != "":
-    print("You wrong")
+while guess != correct and score > 0:
     guess = input("Tray to guess source word: ")
-# сюда вставить посказки при пустом вводу
-if guess == correct:
-    print("Yes, its it!\n")
+    print("You wrong, in wiil be cost fot you", mistake, "points of score", score)
+    score += mistake
+    print("You score for now", score, "points")
+if score == 0:
+    print("YOU lOSE, to mush mistakes")
+if guess == correct and score > 0:
+    print("Yes, you do it!", "\nYou guess word:\t", correct, "you score: ", score, "of ", max_score)
+    input("\n\nHaжмитe Enter. чтобы выйти ")
 
-print("Thanks for playing.")
-input("\n\nPress Enter to exit.")

@@ -55,7 +55,7 @@ while guess != correct and score > 0:
     score += mistake
     print("You score for now", score, "points")
 if score == 0:
-    print("YOU lOSE, to mush mistakes")
+    print("YOU lOSE, to muсh mistakes")
 if guess == correct and score > 0:
     print("Yes, you do it!", "\nYou guess word:\t", correct, "you score: ", score, "of ", max_score)
     input("\n\nHaжмитe Enter. чтобы выйти ")

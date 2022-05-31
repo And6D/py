@@ -32,11 +32,11 @@ while word:
 # score system
 score = 100
 max_score =score
-mistake = -10
-use_prompt = -30
+mistake = 10
+use_prompt = 30
 
 print("""\n\tWat a jumble! Letter in word just going mad""")
-print("\nTry guess word:\t", jumble, "\nit consists ", len(jumble), " letter at length")
+print(f"\nTry guess word:\t {jumble} \nit consists {len(jumble)} letter at length")
 
 guess = input("\nHere the rules:\nGuess оr Enter to take prompt"
               "\nYou can use a prompt just once, now or newer"
@@ -45,18 +45,16 @@ guess = input("\nHere the rules:\nGuess оr Enter to take prompt"
               "\nEvery additional try -10 points to you score"
               "\nYou will lose, when score will be 0 \t\n")
 if guess =="":
-    score += use_prompt
-    print("Prompt: ", prompt, "\nyou lost for use a prompt", use_prompt, "\nscore for now:",
-          score)
-
+    score -= use_prompt
+    print(f"Prompt: {prompt} \nyou lost for use a prompt {use_prompt} \nscore for now: {score}")
 while guess != correct and score > 0:
     guess = input("Tray to guess source word: ")
-    print("You wrong, in wiil be cost fot you", mistake, "points of score", score)
-    score += mistake
-    print("You score for now", score, "points")
+    print(f"You wrong, in wiLl be cost fot you {mistake}points of score {score}")
+    score -= mistake
+    print(f"You score for now {score} points")
 if score == 0:
     print("YOU lOSE, to muсh mistakes")
 if guess == correct and score > 0:
-    print("Yes, you do it!", "\nYou guess word:\t", correct, "you score: ", score, "of ", max_score)
+    print(f"Yes, you do it! \nYou guess word:\t {correct} you score: {score} of {max_score}")
     input("\n\nHaжмитe Enter. чтобы выйти ")
 

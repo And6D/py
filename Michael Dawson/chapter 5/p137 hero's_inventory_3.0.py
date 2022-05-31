@@ -12,8 +12,8 @@ if "healing poison" in inventory:
 #cut
 start = int(input("\nSet start index of cut"))
 finish = int(input("Enter final index of cut"))
-print(f"Cut inventory[{start}:{finish}] -this", end=" ")
-print(inventory[start:finish])
+print(f"Cut inventory [{start}:{finish}] -this", end=" ")
+print(inventory [start:finish])
 input("\npress Enter to continue")
 # cluch of list
 chest = ["gold", "gems"]
@@ -28,15 +28,15 @@ input("\npress Enter to continue")
 #cluch of list new meaning
 print("You lost gold and gems, and earn magic gem")
 inventory[4:6] = ["magic gemstone"]
-print(f"Now you nave{inventory}")
+print(f"Now you nave {inventory}")
 input("\npress Enter to continue")
 #del
 print(f"You lost {inventory[2]}")
 del inventory[2]
-print(f"Now in you invenrory{inventory}")
+print(f"Now in you invenrory {inventory}")
 input("\npress Enter to continue")
 #del cut
 print(f"Now you lost{inventory[:2]}")
 del inventory[:2]
-print(f"Now in you invenrory{inventory}")
+print(f"Now in you invenrory {inventory}")
 input("\npress Enter to continue")

@@ -27,3 +27,4 @@ print(
     """)
 
 input("\n Haжмитe Enter. чтобы выйти ")
+

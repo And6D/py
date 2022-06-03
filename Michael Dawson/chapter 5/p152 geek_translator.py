@@ -19,6 +19,7 @@ while choice != "0":
     2 - Add term 
     3 - Add definition
     4 - Dell term """)
+    print(f" Now in dictionary:{geek.keys()}")
     choice = input("You choice: ")
     print()
     # exit

@@ -48,7 +48,7 @@ while choice != "0":
             print(f"Term {term} del")
         else:
             print(f"This {term} not found, it not in dictionary.")
-# bull shit user input
+# miss clic user input
     else:
         print(f"Sorry,no what position in menu {choice}")
 input("Press Enter to exit")

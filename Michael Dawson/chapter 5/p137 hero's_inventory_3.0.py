@@ -9,7 +9,7 @@ input("\npress Enter to continue")
 #in
 if "healing poison" in inventory:
     print("\nYou have healing poison")
-#cut
+# cut
 start = int(input("\nSet start index of cut"))
 finish = int(input("Enter final index of cut"))
 print(f"Cut inventory [{start}:{finish}] -this", end=" ")
@@ -21,21 +21,21 @@ print(f"\nYou find chest.Watch inside in: {chest}\n You loot it")
 inventory += chest
 print(f"\nand now in you have: {inventory}")
 input("\npress Enter to continue")
-#appropriation
+# appropriation
 inventory[0] ="crossbow"
 print(f"Lets check inventory: {inventory}")
 input("\npress Enter to continue")
-#cluch of list new meaning
+# cluch of list new meaning
 print("You lost gold and gems, and earn magic gem")
 inventory[4:6] = ["magic gemstone"]
 print(f"Now you nave {inventory}")
 input("\npress Enter to continue")
-#del
+# del
 print(f"You lost {inventory[2]}")
 del inventory[2]
 print(f"Now in you invenrory {inventory}")
 input("\npress Enter to continue")
-#del cut
+# del cut
 print(f"Now you lost{inventory[:2]}")
 del inventory[:2]
 print(f"Now in you invenrory {inventory}")

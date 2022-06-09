@@ -107,7 +107,7 @@ so_far = "-" * len(word)  # one "-" on each symbol, wat need to guess
 wrong = 0  # number of wrong user choices
 used = []  # symbol's what user already typed
 # main circle
-print("Welcome to 'HANGMAN' game, Good like.")
+print("Welcome to 'HANGMAN' game, \n\tGood like.")
 while wrong < MAX_WRONG and so_far != word:
     print(f"{HANGMAN[wrong]}"
           f"\n You already use this letters:"
@@ -118,7 +118,7 @@ while wrong < MAX_WRONG and so_far != word:
     guess = input("\n\n Type a letter")
     guess = guess.upper()  # re-write enter in capital
     while guess in used:
-        print(f"You already enter {guess} letter")
+        print(f"You already enter {guess} before")
         guess = input("\n\n Enter letter: ")
         guess = guess.upper()
     used.append(guess)
@@ -135,8 +135,8 @@ while wrong < MAX_WRONG and so_far != word:
         so_far = new
         # in check
     else:
-        print(f"\n No, {guess} not contained in word")
-        wrong += 1
+         print(f"\n No, {guess}, is not contained in word")
+         wrong += 1
 if wrong == MAX_WRONG:
     print(f"{HANGMAN[wrong]} \n you was hangman!")
 else:

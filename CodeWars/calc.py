@@ -21,7 +21,7 @@ def minus(second_operand):
 def times(second_operand):
     return lambda first_operand: first_operand * second_operand
 def divided_by(second_operand):
-    return lambda first_operand: int(first_operand / second_operand)
+    return lambda first_operand: (first_operand // second_operand)
 
 print(seven(times(five()))) # must return 35
 

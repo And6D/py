@@ -19,9 +19,8 @@ def data_slicer():
     """slice data from source to "70" simbols on each line"""
     element = len(take_source())
     return element
-print(data_slicer())
 
-print(f"Data loaded: {data_slicer()}")
+print(f"\nData loaded: {data_slicer()} simbols")
 # to do test
 # (()) and ()() both result in floor 0.
 # ((( and (()(()( both result in floor 3.

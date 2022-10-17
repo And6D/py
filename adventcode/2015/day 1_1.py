@@ -11,7 +11,7 @@ print("Agenda:\n\t\t\t\t--- Day 1: Not Quite Lisp ---"
 
 def take_source():
     """adding source"""
-    with open("input_d1.txt", "r") as file:
+    with open("input source/input_d1.txt", "r") as file:
         data = file.read()
     return data
 

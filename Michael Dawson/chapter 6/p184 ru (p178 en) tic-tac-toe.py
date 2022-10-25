@@ -77,13 +77,13 @@ def display_board(board):
 def legal_moves(board):
     """Create list of legal moves."""
     moves = []
-    for square in range (NUM_SQUARES):
+    for square in range(NUM_SQUARES):
         if board[square] == EMPTY:
             moves.append(square)
-    return
+    return moves
 
 
-def winner (board):
+def winner(board):
     """Determine the game winner."""
     WAYS_TO_WIN = ((0, 1, 2),
                    (3, 4, 5),
@@ -96,10 +96,11 @@ def winner (board):
     for row in WAYS_TO_WIN:
         if board[row[0]] == board[row[1]] == board[row[2]] != EMPTY:
             winner = board[row[0]]
-        return winner
+            return winner
 
     if EMPTY not in board:
         return TIE
+
     return None
 
 
@@ -146,6 +147,7 @@ def computer_move(board, computer, human):
             print(move)
             return move
 
+
 def next_turn(turn):
     """Svitch turns"""
     if turn == X:
@@ -153,3 +155,46 @@ def next_turn(turn):
     else:
         return X
 
+
+def congrat_winner(the_winner, computer, human):
+    """ Congratulate the winner."""
+    if the_winner != TIE:
+        print(the_winner, "won!\n")
+    else:
+        print("It's a tie!\n")
+
+    if the_winner == computer:
+        print("As I predicted, human , I am triumphant once more. \n" \
+              "Proof that computers ara superior to humans in all regards.")
+    elif the_winner == human:
+        print("No, no! It cannot be! Somehow you triched me, human. \n" \
+              "But never again! I, the computer, so swear it!")
+
+    elif the_winner == TIE:
+        print("You were most lucky, human,  and some how managed to tie me. \n" \
+              "Celebrate today... for this is the best you will ever achieve.")
+
+
+def main():
+    display_instruct()
+    computer, human = pieces()
+    turn = X
+    board = new_board()
+    display_board(board)
+
+    while not winner(board):
+        if turn == human:
+            move = human_move(board, human)
+            board[move] = human
+        else:
+            move = computer_move(board, computer, human)
+            board[move] = computer
+        display_board(board)
+        turn = next_turn(turn)
+
+    the_winner = winner(board)
+    congrat_winner(the_winner, computer, human)
+
+# start the programm
+main()
+input("\n\nPress the enter key to quit.")

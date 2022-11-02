@@ -11,4 +11,18 @@ WORDS = ["bullet", "sword", "turbojet",
 # print all word from WORDS
 # while if word not duble in WORDS print word
 
+def check_dup(l):
+    newList = []
+    for i in WORDS:
+        if i not in newList:
+            newList.append(i)
+    return newList
 
+newList = check_dup(WORDS)
+
+random.shuffle(newList)
+
+for i in newList:
+    print(i)
+
+# не красивое надо перделать

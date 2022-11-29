@@ -25,4 +25,4 @@ random.shuffle(newList)
 for i in newList:
     print(i)
 
-# не красивое надо перделать
+# не красивое надо переделать

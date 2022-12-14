@@ -18,3 +18,21 @@ def lift_floor():
 print(f"\nCurrent floor number of the house is: {lift_floor()}")
 
 """-part 2-"""
+
+
+def position(input_string, floor_query):
+    if floor_query == 0:
+        return 0
+
+    floor = 0
+
+    for idx, char in enumerate(input_string, start=1):
+        if char == '(':
+            floor += 1
+        elif char == ')':
+            floor -= 1
+        if floor == floor_query:
+            return idx
+
+
+print(position(take_source(), -1))

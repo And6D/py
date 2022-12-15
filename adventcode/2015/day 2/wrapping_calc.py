@@ -10,7 +10,7 @@ def spliter():
     pac = take_source().splitlines()
     return pac
 
-"""Calculate how many bixes of presents elves have"""
+"""Calculate how many boxes of presents elves have"""
 boxes = len(spliter())
 
 """Part 1"""
